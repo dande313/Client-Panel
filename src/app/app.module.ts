@@ -23,6 +23,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 import { ClientService } from './services/client.service';
+import { AuthService } from './services/auth.service';
 
 // Create Routes
 
@@ -62,7 +63,8 @@ const appRoutes: Routes = [
   providers: [
     AngularFireDatabase,
     AngularFireDatabaseModule,
-    ClientService
+    ClientService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

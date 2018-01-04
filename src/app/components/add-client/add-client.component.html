@@ -41,8 +41,8 @@
         type="text"
         class="form-control"
         [ngClass]="{'is-invalid': clientLastName.errors?.required && clientLastName.touched || clientLastName.errors?.minlength && clientLastName.touched}"
-        [(ngModel)]="client.LastName"
-        name="LastName"
+        [(ngModel)]="client.lastName"
+        name="lastName"
         #clientLastName = "ngModel"
         minlength="2"
         required
@@ -78,16 +78,16 @@
 
       <!-- Phone field -->
       <div class="form-group">
-          <label for="Phone">Phone (ex. 1234567890)</label>
+          <label for="Phone">Phone (ex. 123-456-7890)</label>
           <input 
-          type="number"
+          type="text"
           class="form-control"
           [ngClass]="{'is-invalid': clientPhone.errors?.required && clientPhone.touched || clientPhone.errors?.pattern && clientPhone.touched}"
           [(ngModel)]="client.Phone"
           name="phone"
           #clientPhone = "ngModel"
           required
-          pattern="^\d{10}$"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           >
           <div *ngIf="clientPhone.errors?.required && clientPhone.touched" class="invalid-feedback">
             Phone is required

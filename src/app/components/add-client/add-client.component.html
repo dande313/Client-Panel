@@ -57,12 +57,12 @@
 
       <!-- Email field -->
       <div class="form-group">
-        <label for="Email">Email</label>
+        <label for="email">Email</label>
         <input 
         type="email"
         class="form-control"
         [ngClass]="{'is-invalid': clientEmail.errors?.required && clientEmail.touched || clientEmail.errors?.pattern && clientEmail.touched}"
-        [(ngModel)]="client.Email"
+        [(ngModel)]="client.email"
         name="email"
         #clientEmail = "ngModel"
         required
@@ -78,12 +78,12 @@
 
       <!-- Phone field -->
       <div class="form-group">
-          <label for="Phone">Phone (ex. 123-456-7890)</label>
+          <label for="phone">Phone (ex. 123-456-7890)</label>
           <input 
           type="text"
           class="form-control"
           [ngClass]="{'is-invalid': clientPhone.errors?.required && clientPhone.touched || clientPhone.errors?.pattern && clientPhone.touched}"
-          [(ngModel)]="client.Phone"
+          [(ngModel)]="client.phone"
           name="phone"
           #clientPhone = "ngModel"
           required

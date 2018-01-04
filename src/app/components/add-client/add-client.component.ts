@@ -38,7 +38,7 @@ export class AddClientComponent implements OnInit {
     } else {
       // Add new client
       this.clientService.newClient(value);
-      this.flashMessagesService.show('New Client Submitted', { cssClass: 'success', timeout: 4000});
+      this.flashMessagesService.show('New Client Submitted', { cssClass: 'alert-success', timeout: 4000});
       this.router.navigate(['/']);
     }
   }

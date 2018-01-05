@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
         });
         this.router.navigate(['/']);
       })
-      .catch((err) => { 
-        this.flashMessagesService.show('Invalid Credentials', {
+      .catch((err) => {
+        this.flashMessagesService.show(err.message, {
           cssClass: 'alert-danger', timeout: 4000
         });
         this.router.navigate(['/login']);
